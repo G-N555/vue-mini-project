@@ -3,8 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png" />
     <h1>{{ title }}</h1>
     <navbar />
-    <allphotos />
-    <singlePhoto v-on:click="changeView"/>
+    <allphotos @changeView="onChangeView"/>
   </div>
 </template>
 
@@ -17,11 +16,16 @@ export default {
   components: {
     navbar: Navbar,
     allphotos: AllPhotos,
-    // singlePhoto: SinglePhoto
   },
   data: () => ({
-    title: "Yes, photo is here"
-  })
+    title: "Yes, photos are here",
+    photos: "",
+  }),
+  methods: {
+    onChangeView: (event) => {
+      this.photos = event;
+    }
+  }
 };
 </script>
 
@@ -29,5 +33,6 @@ export default {
 #app {
   text-align: center;
   background-color: rgb(7, 2, 27);
+  color: white;
 }
 </style>

@@ -1,8 +1,7 @@
 <template>
 <div>
   <button v-on:click="refresh">Fresh</button>
-  <button>Home</button>
-  <upload>upload</upload>
+  <upload class="input">UPLOAD</upload>
 </div>
 </template>
 
@@ -23,4 +22,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+</style>

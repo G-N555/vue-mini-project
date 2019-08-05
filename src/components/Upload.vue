@@ -1,5 +1,5 @@
 <template>
-  <input type="file" id="upload" v-on:change="uploadFile($event)"/>
+  <input class="input-button"type="file" id="upload" v-on:change="uploadFile($event)"/>
 </template>
 
 <script>
@@ -16,4 +16,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+</style>
